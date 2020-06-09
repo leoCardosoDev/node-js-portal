@@ -23,9 +23,11 @@ DESC noticias;
     +--------------+--------------+------+-----+-------------------+-------------------+
 */
 
-INSERT INTO noticias(titulo, noticia) VALUES('Titulo da notícia', 'Conteudo da notícia');
+INSERT INTO noticias(titulo, noticia) VALUES('Titulo da notícia', 'Conteudo da outra notícia');
+INSERT INTO noticias(titulo, noticia) VALUES('Outra notícia', 'Conteudo da notícia');
 
-SELECT id_noticia, titulo, noticia, data_criacao from noticias;
+select id_noticia, titulo, noticia, data_criacao from noticias;
+SELECT id_noticia, titulo, noticia, data_criacao FROM noticias;
 /*
     +------------+--------------------+----------------------+---------------------+
     | id_noticia | titulo             | noticia              | data_criacao        |
@@ -34,4 +36,5 @@ SELECT id_noticia, titulo, noticia, data_criacao from noticias;
     +------------+--------------------+----------------------+---------------------+
 */
 
+UPDATE noticias SET noticia = 'Conteudo da outra notícia' WHERE id_noticia = 2;
 
