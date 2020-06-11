@@ -3,12 +3,12 @@ function NoticiasDAO(connection){
 }
 
 NoticiasDAO.prototype.getNoticias = function(callback){
-    var sql = 'select id_noticia, titulo, noticia, data_criacao from noticias'
+    var sql = 'SELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias;'
     this._connection.query(sql, callback)
 }
 
 NoticiasDAO.prototype.getNoticia = function(callback){
-    var sql = 'select id_noticia, titulo, noticia, data_criacao from noticias where id_noticia = 2'
+    var sql = 'sSELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias WHERE id_noticia = 2'
     this._connection.query(sql, callback)
 }
 

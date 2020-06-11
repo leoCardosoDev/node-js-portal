@@ -38,3 +38,26 @@ SELECT id_noticia, titulo, noticia, data_criacao FROM noticias;
 
 UPDATE noticias SET noticia = 'Conteudo da outra notícia' WHERE id_noticia = 2;
 
+ALTER TABLE noticias ADD COLUMN resumo VARCHAR(100);
+ALTER TABLE noticias ADD COLUMN autor VARCHAR(30);
+ALTER TABLE noticias ADD COLUMN data_noticia DATE;
+
+SHOW TABLES;
+DESC noticias;
+/*
++--------------+--------------+------+-----+-------------------+-------------------+
+| Field        | Type         | Null | Key | Default           | Extra             |
++--------------+--------------+------+-----+-------------------+-------------------+
+| id_noticia   | int          | NO   | PRI | NULL              | auto_increment    |
+| titulo       | varchar(100) | YES  |     | NULL              |                   |
+| noticia      | text         | YES  |     | NULL              |                   |
+| data_criacao | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| resumo       | varchar(100) | YES  |     | NULL              |                   |
+| autor        | varchar(30)  | YES  |     | NULL              |                   |
+| data_noticia | date         | YES  |     | NULL              |                   |
++--------------+--------------+------+-----+-------------------+-------------------+
+*/
+
+SELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias;
+
+DELETE FROM noticias WHERE id_noticia = 12;
