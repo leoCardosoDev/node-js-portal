@@ -61,3 +61,11 @@ DESC noticias;
 SELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias;
 
 DELETE FROM noticias WHERE id_noticia = 12;
+
+SELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias ORDER BY data_noticia DESC LIMIT 5;
+
+SELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias ORDER BY data_criacao DESC LIMIT 5;
+
+SELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias ORDER BY id_noticia DESC LIMIT 5;
+
+SELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias ORDER BY id_noticia DESC;
