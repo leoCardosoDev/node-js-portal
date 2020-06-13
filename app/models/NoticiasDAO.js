@@ -8,7 +8,7 @@ NoticiasDAO.prototype.getNoticias = function(callback){
 }
 
 NoticiasDAO.prototype.getNoticia = function(callback){
-    var sql = 'sSELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias WHERE id_noticia = 2'
+    var sql = 'SELECT id_noticia, titulo, resumo, noticia, autor, data_criacao, data_noticia FROM noticias WHERE id_noticia = 2'
     this._connection.query(sql, callback)
 }
 
